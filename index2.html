@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediaPipe Pose 重心計算テスト</title>
+
+  <!-- MediaPipe -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+
+  <style>
+    body { text-align: center; font-family: "Segoe UI", sans-serif; }
+    video, canvas {
+      width: 640px;
+      height: 480px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    #coords {
+      font-weight: bold;
+      margin-top: 10px;
+      font-size: 1.1em;
+    }
+    button {
+      margin-top: 10px;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 0.9em;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h2>MediaPipe Pose 重心計算テスト</h2>
+
+  <video id="video" autoplay muted playsinline></video>
+  <canvas id="canvas" width="640" height="480"></canvas>
+
+  <div id="centerText">重心 (x, y) = (0.000, 0.000)</div>
+  <button id="stopButton">カメラ停止</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
