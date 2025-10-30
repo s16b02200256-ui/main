@@ -6,7 +6,7 @@ let historyUpper = [];
 let historyLower = [];
 let historyCombined = [];
 
-// Poseモジュールのインスタンス生成方法を修正！
+// Poseモジュールのインスタンス生成方法を修正！ 111
 const pose = new Pose({
   locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/pose/${file}`,
 });
