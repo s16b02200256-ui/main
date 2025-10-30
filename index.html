@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>重心可視化デモ（MediaPipe + JavaScript）</title>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils"></script>
+  <script defer src="script.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+    }
+    video, canvas {
+      border-radius: 12px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>姿勢推定＋重心軌跡可視化</h2>
+  <video class="input_video" playsinline></video>
+  <canvas class="output_canvas" width="640" height="480"></canvas>
+</body>
+</html>
